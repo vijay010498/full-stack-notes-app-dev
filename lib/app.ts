@@ -7,7 +7,8 @@ app.use(json());
 app.use(getRouter());
 
 const start = async () => {
-  await app.listen(5000, () => {
+  const PORT  = process.env.PORT || 5000;
+  await app.listen(PORT, () => {
     console.log('Server started on port 5000');
   });
 };
