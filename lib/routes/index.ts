@@ -6,6 +6,7 @@ const router = express.Router();
 
 function getRouter() {
   router.get('/health', NotesAppController.health);
+  router.post('/signup', NotesAppController.signUp);
   router.all('*', () => {
     throw new NotFoundError();
   });
